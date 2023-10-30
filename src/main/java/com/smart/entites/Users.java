@@ -73,7 +73,7 @@ public class Users {
 	private String about;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "user")
+	@OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true)
 	private List<Contact> contacts=new ArrayList<>();
 	
 	
